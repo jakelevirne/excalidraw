@@ -12,6 +12,7 @@ test("drawing a rectangle and a text label", async ({
   app,
   agent,
   browser,
+  screen,
 }) => {
   const saved = async () => kinds(await browser.evaluate(savedScene));
   const loaded = async () => kinds(await browser.evaluate(liveScene));
@@ -20,6 +21,14 @@ test("drawing a rectangle and a text label", async ({
 
   await agent.act("draw a rectangle on the canvas");
   await expect.poll(saved).toEqual(["rectangle"]);
+
+  // Deselect the new rectangle first. While it is selected, Excalidraw shows a hint
+  // that names Cmd on a Mac and Ctrl on Linux, and a recording anchored on that hint
+  // would not replay in CI.
+  await browser.keyboard.press("Escape");
+  await expect(
+    screen.getByRole("heading", "Selected shape actions"),
+  ).toBeHidden();
 
   await agent.act("add the text {text} on the canvas, below the rectangle", {
     params: { text: "Hello e2e" },
