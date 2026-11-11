@@ -1,0 +1,165 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-10T18:41:44.148Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Text\" in \"Enter to add text, Cmd + ↑↓ to create a…\"",
+        "target": {
+          "role": "button",
+          "name": "Text",
+          "testId": "toolbar-text",
+          "within": "Enter to add text, Cmd + ↑↓ to create a flowchart"
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (400, 475) on image (1 of 1)",
+        "point": {
+          "x": 400,
+          "y": 475
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "role": "image",
+            "position": {
+              "index": 0,
+              "of": 1
+            }
+          },
+          "fx": 0.3125,
+          "fy": 0.6597
+        }
+      },
+      {
+        "name": "type",
+        "summary": "type \"Hello e2e\" into textbox (1 of 1)",
+        "target": {
+          "role": "textbox",
+          "position": {
+            "index": 0,
+            "of": 1
+          }
+        },
+        "value": "Hello e2e"
+      },
+      {
+        "name": "pressKey",
+        "summary": "press \"Escape\" on the focused field",
+        "key": "Escape"
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "tests/drawing.e2e.ts::drawing%20a%20rectangle%20and%20a%20text%20label",
+      "targetId": "web",
+      "instructionDigest": "cc1f56a0c02d3752886da5c04a8ecc95adff081ab206cc00d53b2004b4d58544",
+      "paramsDigest": "1738a818f90505e8d30844228caf2811a2ef98bd9a5c7fc279e1667b06edf004",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "openai.responses",
+      "model": "gpt-6-luna"
+    },
+    "summary": "Added the text “Hello e2e” on the canvas below the rectangle and finished editing; the text is visible and selected beneath it.",
+    "startPath": "/",
+    "endPath": "/",
+    "endAnchors": [
+      {
+        "text": "Font family"
+      },
+      {
+        "role": "button",
+        "name": "Hand-drawn",
+        "testId": "font-family-hand-drawn"
+      },
+      {
+        "role": "button",
+        "name": "Normal",
+        "testId": "font-family-normal"
+      },
+      {
+        "role": "button",
+        "name": "Code",
+        "testId": "font-family-code"
+      },
+      {
+        "role": "button",
+        "name": "Show font picker",
+        "testId": "font-family-show-fonts"
+      },
+      {
+        "text": "Font size"
+      },
+      {
+        "role": "radio",
+        "testId": "fontSize-small"
+      },
+      {
+        "role": "radio",
+        "testId": "fontSize-medium",
+        "states": [
+          "checked"
+        ]
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "button",
+        "name": "transparent",
+        "testId": "color-top-pick-transparent"
+      },
+      {
+        "role": "button",
+        "name": "#ffc9c9",
+        "testId": "color-top-pick-#ffc9c9"
+      },
+      {
+        "role": "button",
+        "name": "#b2f2bb",
+        "testId": "color-top-pick-#b2f2bb"
+      },
+      {
+        "role": "button",
+        "name": "#a5d8ff",
+        "testId": "color-top-pick-#a5d8ff"
+      },
+      {
+        "role": "button",
+        "name": "#ffec99",
+        "testId": "color-top-pick-#ffec99"
+      },
+      {
+        "role": "button",
+        "name": "Background"
+      },
+      {
+        "text": "Stroke width"
+      },
+      {
+        "role": "radio",
+        "testId": "strokeWidth-thin"
+      }
+    ],
+    "endWaitMs": 12818,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "9dc84a319aa06923bc918a55495e204efd4269fc868c22c28d25023251bebf40",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "f9f49ed79c2662c7f6e0522da33af26cd0588919fce8b674530ba7c83e5d217c",
+      "agentContextDigest": "bc1ad17181b3977e0d333d0095299e2fd97d4d5744d30b2122a9ec91e8156306"
+    }
+  }
+}

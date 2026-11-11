@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-11T15:09:45.288Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Redo\" in \"Canvas actions\"",
+        "target": {
+          "role": "button",
+          "name": "Redo",
+          "testId": "button-redo",
+          "within": "Canvas actions"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "tests/undo-redo.e2e.ts::undoing%20and%20redoing%20a%20drawing",
+      "targetId": "web",
+      "instructionDigest": "84c887e5ea13a119319af030d3bd98fa2a9ac210e6530a8c49c5fd92ea79ddac",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "openai.responses",
+      "model": "gpt-6-luna"
+    },
+    "summary": "Clicked Redo. The ellipse reappeared selected on the canvas, Undo is enabled, and Redo is disabled, confirming the drawing change was restored.",
+    "startPath": "/",
+    "endPath": "/",
+    "endAnchors": [
+      {
+        "role": "heading",
+        "name": "Selected shape actions"
+      },
+      {
+        "role": "button",
+        "name": "#1e1e1e",
+        "testId": "color-top-pick-#1e1e1e"
+      },
+      {
+        "role": "button",
+        "name": "#e03131",
+        "testId": "color-top-pick-#e03131"
+      },
+      {
+        "role": "button",
+        "name": "#2f9e44",
+        "testId": "color-top-pick-#2f9e44"
+      },
+      {
+        "role": "button",
+        "name": "#1971c2",
+        "testId": "color-top-pick-#1971c2"
+      },
+      {
+        "role": "button",
+        "name": "#f08c00",
+        "testId": "color-top-pick-#f08c00"
+      },
+      {
+        "role": "button",
+        "name": "Stroke"
+      },
+      {
+        "role": "button",
+        "name": "transparent",
+        "testId": "color-top-pick-transparent"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "text": "To move canvas, hold Scroll wheel or Space while dragging, or use the hand tool"
+      },
+      {
+        "text": "Undo"
+      }
+    ],
+    "endWaitMs": 11662,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "9dc84a319aa06923bc918a55495e204efd4269fc868c22c28d25023251bebf40",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "f9f49ed79c2662c7f6e0522da33af26cd0588919fce8b674530ba7c83e5d217c",
+      "agentContextDigest": "bc1ad17181b3977e0d333d0095299e2fd97d4d5744d30b2122a9ec91e8156306"
+    }
+  }
+}
