@@ -1,0 +1,62 @@
+name: e2e
+
+on:
+  pull_request:
+  push:
+    branches: master
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24.x
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      # No --with-deps: ubuntu-latest already has Chromium's system libraries, and the
+      # extra apt fonts it adds made the job fail whenever Ubuntu's mirrors were
+      # unreachable. Excalidraw bundles its own fonts.
+      - name: Install browsers
+        run: yarn e2e-web install chromium
+
+      # The config starts the app's dev server itself. In CI the replay cache is
+      # read-only: steps replay from the committed .e2e/cache/, and a step whose
+      # recording no longer replays runs live on the model.
+      - name: Run e2e
+        run: yarn test:e2e --reporter list,junit
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      - name: Upload report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: e2e-report
+          path: |
+            .e2e/report.json
+            .e2e/junit.xml
+            .e2e/logs/
+          if-no-files-found: warn
+
+      # trace.md pages and videos for every test (the config sets trace and video to "on").
+      - name: Upload traces and videos
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: e2e-results
+          path: .e2e/results
+          if-no-files-found: warn
+          retention-days: 7

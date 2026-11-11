@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-11T15:05:35.069Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"More tools\" in \"To move canvas, hold Scroll wheel or Sp…\"",
+        "target": {
+          "role": "button",
+          "name": "More tools",
+          "testId": "dropdown-menu-button",
+          "within": "To move canvas, hold Scroll wheel or Space while dragging, or use the hand tool"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap menuitem \"Mermaid to Excalidraw\" in \"To move canvas, hold Scroll wheel or Sp…\"",
+        "target": {
+          "role": "menuitem",
+          "name": "Mermaid to Excalidraw",
+          "testId": "toolbar-embeddable",
+          "within": "To move canvas, hold Scroll wheel or Space while dragging, or use the hand tool"
+        }
+      },
+      {
+        "name": "type",
+        "summary": "type \"flowchart LR\\n  Start --> Finish\" into textbox \"Write Mermaid diagram definition here...\" in \"Flowcharts\"",
+        "target": {
+          "role": "textbox",
+          "name": "Write Mermaid diagram definition here...",
+          "within": "Flowcharts"
+        },
+        "value": "flowchart LR\n  Start --> Finish"
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "tests/mermaid.e2e.ts::converting%20a%20Mermaid%20flowchart%20into%20shapes",
+      "targetId": "web",
+      "instructionDigest": "e42a71272881406c18b756757220fca1a19282d745c780d3dd65b244e7adb515",
+      "paramsDigest": "bfe7ffd3067020d21a52c2af4c7b3279d5b20c3b8bb495d7c788df0c037e1df9",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "openai.responses",
+      "model": "gpt-6-luna"
+    },
+    "summary": "Opened the Mermaid tab in the Mermaid to Excalidraw dialog and replaced the editor content with `flowchart LR\\n  Start --> Finish`. The new syntax is visible in the textbox; Insert has not been activated.",
+    "startPath": "/",
+    "endPath": "/",
+    "endAnchors": [
+      {
+        "text": "AI Beta"
+      },
+      {
+        "role": "tab",
+        "name": "Mermaid",
+        "states": [
+          "selected"
+        ]
+      },
+      {
+        "role": "link",
+        "name": "Flowcharts"
+      },
+      {
+        "role": "link",
+        "name": "Sequence"
+      },
+      {
+        "role": "link",
+        "name": "Class"
+      },
+      {
+        "role": "link",
+        "name": "State"
+      },
+      {
+        "role": "link",
+        "name": "Entity Relationship"
+      },
+      {
+        "role": "link",
+        "name": "Gantt charts"
+      }
+    ],
+    "endWaitMs": 12969,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "9dc84a319aa06923bc918a55495e204efd4269fc868c22c28d25023251bebf40",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "f9f49ed79c2662c7f6e0522da33af26cd0588919fce8b674530ba7c83e5d217c",
+      "agentContextDigest": "bc1ad17181b3977e0d333d0095299e2fd97d4d5744d30b2122a9ec91e8156306"
+    }
+  }
+}

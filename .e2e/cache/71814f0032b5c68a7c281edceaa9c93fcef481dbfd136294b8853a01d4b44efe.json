@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-11T21:27:44.641Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Text\" in \"To move canvas, hold Scroll wheel or Sp…\"",
+        "target": {
+          "role": "button",
+          "name": "Text",
+          "testId": "toolbar-text",
+          "within": "To move canvas, hold Scroll wheel or Space while dragging, or use the hand tool"
+        }
+      },
+      {
+        "name": "tapAt",
+        "summary": "tap the point (430, 475) on image (1 of 1)",
+        "point": {
+          "x": 430,
+          "y": 475
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "within": {
+          "target": {
+            "role": "image",
+            "position": {
+              "index": 0,
+              "of": 1
+            }
+          },
+          "fx": 0.3359,
+          "fy": 0.6597
+        }
+      },
+      {
+        "name": "type",
+        "summary": "type \"Hello e2e\" into textbox (1 of 1)",
+        "target": {
+          "role": "textbox",
+          "position": {
+            "index": 0,
+            "of": 1
+          }
+        },
+        "value": "Hello e2e"
+      },
+      {
+        "name": "press",
+        "summary": "press \"Escape\" on textbox (1 of 1)",
+        "target": {
+          "role": "textbox",
+          "position": {
+            "index": 0,
+            "of": 1
+          }
+        },
+        "key": "Escape"
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "tests/drawing.e2e.ts::drawing%20a%20rectangle%20and%20a%20text%20label",
+      "targetId": "web",
+      "instructionDigest": "cc1f56a0c02d3752886da5c04a8ecc95adff081ab206cc00d53b2004b4d58544",
+      "paramsDigest": "1738a818f90505e8d30844228caf2811a2ef98bd9a5c7fc279e1667b06edf004",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "openai.responses",
+      "model": "gpt-6-luna"
+    },
+    "summary": "Added the text “Hello e2e” below the rectangle and exited text editing. The label is visible on the canvas and selected.",
+    "startPath": "/",
+    "endPath": "/",
+    "endAnchors": [
+      {
+        "role": "heading",
+        "name": "Selected shape actions"
+      },
+      {
+        "role": "button",
+        "name": "#1e1e1e",
+        "testId": "color-top-pick-#1e1e1e"
+      },
+      {
+        "role": "button",
+        "name": "#e03131",
+        "testId": "color-top-pick-#e03131"
+      },
+      {
+        "role": "button",
+        "name": "#2f9e44",
+        "testId": "color-top-pick-#2f9e44"
+      },
+      {
+        "role": "button",
+        "name": "#1971c2",
+        "testId": "color-top-pick-#1971c2"
+      },
+      {
+        "role": "button",
+        "name": "#f08c00",
+        "testId": "color-top-pick-#f08c00"
+      },
+      {
+        "role": "button",
+        "name": "Stroke"
+      },
+      {
+        "text": "Font family"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "text": "To move canvas, hold Scroll wheel or Space while dragging, or use the hand tool"
+      }
+    ],
+    "endWaitMs": 15536,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "9dc84a319aa06923bc918a55495e204efd4269fc868c22c28d25023251bebf40",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "f9f49ed79c2662c7f6e0522da33af26cd0588919fce8b674530ba7c83e5d217c",
+      "agentContextDigest": "bc1ad17181b3977e0d333d0095299e2fd97d4d5744d30b2122a9ec91e8156306"
+    }
+  }
+}
