@@ -23,6 +23,7 @@ export const RadioButton = forwardRef<HTMLButtonElement, RadioButtonProps>(
         ref={ref}
         key={title}
         title={title}
+        aria-pressed={active}
         data-testid={testId}
         className={clsx(className, { active })}
         onClick={onClick}

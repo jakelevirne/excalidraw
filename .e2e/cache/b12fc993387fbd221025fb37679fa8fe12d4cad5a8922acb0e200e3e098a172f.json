@@ -1,6 +1,6 @@
 {
   "schemaVersion": "trace-1",
-  "createdAt": "2026-11-11T15:09:45.288Z",
+  "createdAt": "2026-11-12T17:29:14.171Z",
   "payload": {
     "actions": [
       {
@@ -30,7 +30,7 @@
       "provider": "openai.responses",
       "model": "gpt-6-luna"
     },
-    "summary": "Clicked Redo. The ellipse reappeared selected on the canvas, Undo is enabled, and Redo is disabled, confirming the drawing change was restored.",
+    "summary": "The ellipse is visible again on the canvas and selected, and Redo is disabled while Undo is enabled, confirming the redo took effect.",
     "startPath": "/",
     "endPath": "/",
     "endAnchors": [
@@ -41,7 +41,10 @@
       {
         "role": "button",
         "name": "#1e1e1e",
-        "testId": "color-top-pick-#1e1e1e"
+        "testId": "color-top-pick-#1e1e1e",
+        "states": [
+          "pressed"
+        ]
       },
       {
         "role": "button",
@@ -70,7 +73,10 @@
       {
         "role": "button",
         "name": "transparent",
-        "testId": "color-top-pick-transparent"
+        "testId": "color-top-pick-transparent",
+        "states": [
+          "pressed"
+        ]
       }
     ],
     "goneAnchors": [
@@ -81,7 +87,7 @@
         "text": "Undo"
       }
     ],
-    "endWaitMs": 11662,
+    "endWaitMs": 10107,
     "keyedBy": {
       "cacheSchema": "trace-1",
       "policyVersion": "conservative/6",

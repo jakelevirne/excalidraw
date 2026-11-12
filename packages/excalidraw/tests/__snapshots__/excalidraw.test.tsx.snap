@@ -699,6 +699,7 @@ exports[`<Excalidraw/> > Test UIOptions prop > Test canvasActions > should rende
             class="color-picker__top-picks top-picks-dnd"
           >
             <button
+              aria-pressed="true"
               class="color-picker__button top-picks-dnd__pick active has-outline"
               data-testid="color-top-pick-#ffffff"
               data-top-pick-index="0"
@@ -711,6 +712,7 @@ exports[`<Excalidraw/> > Test UIOptions prop > Test canvasActions > should rende
               />
             </button>
             <button
+              aria-pressed="false"
               class="color-picker__button top-picks-dnd__pick has-outline"
               data-testid="color-top-pick-#f8f9fa"
               data-top-pick-index="1"
@@ -723,6 +725,7 @@ exports[`<Excalidraw/> > Test UIOptions prop > Test canvasActions > should rende
               />
             </button>
             <button
+              aria-pressed="false"
               class="color-picker__button top-picks-dnd__pick has-outline"
               data-testid="color-top-pick-#f5faff"
               data-top-pick-index="2"
@@ -735,6 +738,7 @@ exports[`<Excalidraw/> > Test UIOptions prop > Test canvasActions > should rende
               />
             </button>
             <button
+              aria-pressed="false"
               class="color-picker__button top-picks-dnd__pick has-outline"
               data-testid="color-top-pick-#fffce8"
               data-top-pick-index="3"
@@ -747,6 +751,7 @@ exports[`<Excalidraw/> > Test UIOptions prop > Test canvasActions > should rende
               />
             </button>
             <button
+              aria-pressed="false"
               class="color-picker__button top-picks-dnd__pick has-outline"
               data-testid="color-top-pick-#fdf8f6"
               data-top-pick-index="4"

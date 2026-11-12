@@ -49,6 +49,8 @@ export const RadioSelection = <T extends Object>(
             name={props.group}
             onChange={() => props.onChange(option.value)}
             checked={props.value === option.value}
+            // The label holds only an icon, and its title does not name the input.
+            aria-label={option.text}
             data-testid={option.testId}
           />
           {option.icon}
