@@ -113,6 +113,7 @@ export const TopPicks = ({
               key={color}
               type="button"
               title={color}
+              aria-pressed={color === activeColor}
               onClick={() => onChange(color)}
               onPointerDown={
                 dnd

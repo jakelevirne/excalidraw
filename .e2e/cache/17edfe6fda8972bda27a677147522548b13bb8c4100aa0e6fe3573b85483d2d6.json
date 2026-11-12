@@ -1,6 +1,6 @@
 {
   "schemaVersion": "trace-1",
-  "createdAt": "2026-11-11T15:09:57.868Z",
+  "createdAt": "2026-11-12T17:28:10.630Z",
   "payload": {
     "actions": [
       {
@@ -72,7 +72,7 @@
       "provider": "openai.responses",
       "model": "gpt-6-luna"
     },
-    "summary": "Selected the Rectangle tool and drew a rectangle on the canvas. The rectangle is visible and selected, with the undo action enabled.",
+    "summary": "Verified the rectangle is present on the canvas and selected, with its bounding handles and rectangle styling controls visible.",
     "startPath": "/",
     "endPath": "/",
     "endAnchors": [
@@ -83,7 +83,10 @@
       {
         "role": "button",
         "name": "#1e1e1e",
-        "testId": "color-top-pick-#1e1e1e"
+        "testId": "color-top-pick-#1e1e1e",
+        "states": [
+          "pressed"
+        ]
       },
       {
         "role": "button",
@@ -112,7 +115,10 @@
       {
         "role": "button",
         "name": "transparent",
-        "testId": "color-top-pick-transparent"
+        "testId": "color-top-pick-transparent",
+        "states": [
+          "pressed"
+        ]
       }
     ],
     "goneAnchors": [
@@ -141,7 +147,7 @@
         "text": "To move canvas, hold Scroll wheel or Space while dragging, or use the hand tool"
       }
     ],
-    "endWaitMs": 12278,
+    "endWaitMs": 10111,
     "keyedBy": {
       "cacheSchema": "trace-1",
       "policyVersion": "conservative/6",

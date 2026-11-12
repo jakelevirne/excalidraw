@@ -3,17 +3,15 @@ import { expect } from "e2e";
 
 import { liveScene } from "./scene";
 
-// The color and dash-style steps run live on every run: Excalidraw's color swatches
-// expose no pressed state and its stroke-style radios have no accessible name, so the
-// replay cache sees nothing it could check after them ("nothing recorded").
+// The scene checks pin the exact values. The pressed swatch and checked radio checks
+// read the accessible state a screen reader gets, and they confirm each step for the
+// replay cache, which expect.poll alone does not.
 test("changing a rectangle's stroke color and style", async ({
   app,
   agent,
   browser,
+  screen,
 }) => {
-  // The stroke style radios have no test id; their label's title names the option.
-  const strokeStyle = (name: string) =>
-    browser.locator(`label[title="${name}"] input[type="radio"]`);
   const rectangle = async () =>
     (await browser.evaluate(liveScene)).find((el) => el.type === "rectangle");
 
@@ -21,15 +19,18 @@ test("changing a rectangle's stroke color and style", async ({
 
   await agent.act("draw a rectangle on the canvas");
   await expect.poll(rectangle).toMatchObject({ strokeStyle: "solid" });
-  await expect(strokeStyle("Solid")).toBeChecked();
+  await expect(screen.getByRole("radio", "Solid")).toBeChecked();
 
   await agent.act("make the rectangle's stroke red");
-  // #e03131 is the red in Excalidraw's stroke color palette.
+  // #e03131 is the red in Excalidraw's stroke color palette; swatches are named by color.
   await expect.poll(rectangle).toMatchObject({ strokeColor: "#e03131" });
+  await expect(
+    screen.getByRole("button", "#e03131", { pressed: true }),
+  ).toBeVisible();
 
   await agent.act("set the rectangle's stroke style to Dashed");
   await expect
     .poll(rectangle)
     .toMatchObject({ strokeColor: "#e03131", strokeStyle: "dashed" });
-  await expect(strokeStyle("Dashed")).toBeChecked();
+  await expect(screen.getByRole("radio", "Dashed")).toBeChecked();
 });

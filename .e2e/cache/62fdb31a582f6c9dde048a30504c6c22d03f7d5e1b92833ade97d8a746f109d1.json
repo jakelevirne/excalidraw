@@ -1,6 +1,6 @@
 {
   "schemaVersion": "trace-1",
-  "createdAt": "2026-11-11T15:10:52.381Z",
+  "createdAt": "2026-11-12T17:28:53.835Z",
   "payload": {
     "actions": [
       {
@@ -29,7 +29,7 @@
       "provider": "openai.responses",
       "model": "gpt-6-luna"
     },
-    "summary": "Activated Insert for the Mermaid flowchart. The dialog closed, Undo is enabled, and the canvas visibly contains Start and Finish boxes connected by an arrow.",
+    "summary": "Verified the Mermaid flowchart was inserted on the canvas as two labeled boxes, “Start” and “Finish,” connected by an arrow.",
     "startPath": "/",
     "endPath": "/",
     "endAnchors": [
@@ -40,7 +40,10 @@
       {
         "role": "button",
         "name": "#1e1e1e",
-        "testId": "color-top-pick-#1e1e1e"
+        "testId": "color-top-pick-#1e1e1e",
+        "states": [
+          "pressed"
+        ]
       },
       {
         "role": "button",
@@ -98,7 +101,7 @@
         "text": "To move canvas, hold Scroll wheel or Space while dragging, or use the hand tool"
       }
     ],
-    "endWaitMs": 13921,
+    "endWaitMs": 10098,
     "keyedBy": {
       "cacheSchema": "trace-1",
       "policyVersion": "conservative/6",

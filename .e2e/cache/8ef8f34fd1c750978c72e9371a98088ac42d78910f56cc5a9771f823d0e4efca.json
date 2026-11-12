@@ -1,6 +1,6 @@
 {
   "schemaVersion": "trace-1",
-  "createdAt": "2026-11-10T18:41:44.148Z",
+  "createdAt": "2026-11-12T17:29:14.913Z",
   "payload": {
     "actions": [
       {
@@ -72,7 +72,7 @@
       "provider": "openai.responses",
       "model": "gpt-6-luna"
     },
-    "summary": "Selected the Rectangle tool and dragged on the canvas. A rounded rectangle is visible and selected, and Undo is enabled.",
+    "summary": "Verified on the canvas that a rounded rectangle has been drawn and is selected, with its bounding handles visible.",
     "startPath": "/",
     "endPath": "/",
     "endAnchors": [
@@ -83,7 +83,10 @@
       {
         "role": "button",
         "name": "#1e1e1e",
-        "testId": "color-top-pick-#1e1e1e"
+        "testId": "color-top-pick-#1e1e1e",
+        "states": [
+          "pressed"
+        ]
       },
       {
         "role": "button",
@@ -112,7 +115,10 @@
       {
         "role": "button",
         "name": "transparent",
-        "testId": "color-top-pick-transparent"
+        "testId": "color-top-pick-transparent",
+        "states": [
+          "pressed"
+        ]
       }
     ],
     "goneAnchors": [
@@ -141,7 +147,7 @@
         "text": "To move canvas, hold Scroll wheel or Space while dragging, or use the hand tool"
       }
     ],
-    "endWaitMs": 12014,
+    "endWaitMs": 10110,
     "keyedBy": {
       "cacheSchema": "trace-1",
       "policyVersion": "conservative/6",
